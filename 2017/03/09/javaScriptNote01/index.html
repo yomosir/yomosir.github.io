@@ -72,7 +72,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JSP," />
+  <meta name="keywords" content="javaScript," />
 
 
 
@@ -88,40 +88,25 @@
 
 
 
-<meta name="description" content="JSP与Servlet的关系现有Servlet后有JSP–并且JSP就是Servlet
-JSP的九个内置对象
-WEB域内置对象【存值取值-传送数据】
+<meta name="description" content="javaScript简单数据类型在javaScript中简单数据类型只有五种：
 
-
-page/pageContext:只在当前页面有效，离开无效
-request:在一次请求转发中有效
-session:在一次会话中有效，在打开浏览器是第一次访问为一个新的会话，如何再次访问则不属于第一个会话。
-application:在服务器范围有">
+undefined：代表什么都没有，用typeof(undefined)得到的结果依然是undefined。可以将undefined赋值给任何变量和属性，但并不意味着清楚该变量，反而会多一个属性
+null：有概念但没有东西，typeof(null)得到的结果是object，但是null并非object，而且具有nul">
 <meta property="og:type" content="article">
-<meta property="og:title" content="EL表达式">
-<meta property="og:url" content="http://yomosir.com/2017/03/07/EL表达式/index.html">
+<meta property="og:title" content="javaScriptNote01">
+<meta property="og:url" content="http://yomosir.com/2017/03/09/javaScriptNote01/index.html">
 <meta property="og:site_name" content="Coding And Study">
-<meta property="og:description" content="JSP与Servlet的关系现有Servlet后有JSP–并且JSP就是Servlet
-JSP的九个内置对象
-WEB域内置对象【存值取值-传送数据】
+<meta property="og:description" content="javaScript简单数据类型在javaScript中简单数据类型只有五种：
 
-
-page/pageContext:只在当前页面有效，离开无效
-request:在一次请求转发中有效
-session:在一次会话中有效，在打开浏览器是第一次访问为一个新的会话，如何再次访问则不属于第一个会话。
-application:在服务器范围有">
-<meta property="og:updated_time" content="2017-03-08T02:26:40.332Z">
+undefined：代表什么都没有，用typeof(undefined)得到的结果依然是undefined。可以将undefined赋值给任何变量和属性，但并不意味着清楚该变量，反而会多一个属性
+null：有概念但没有东西，typeof(null)得到的结果是object，但是null并非object，而且具有nul">
+<meta property="og:updated_time" content="2017-03-09T14:36:23.038Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="EL表达式">
-<meta name="twitter:description" content="JSP与Servlet的关系现有Servlet后有JSP–并且JSP就是Servlet
-JSP的九个内置对象
-WEB域内置对象【存值取值-传送数据】
+<meta name="twitter:title" content="javaScriptNote01">
+<meta name="twitter:description" content="javaScript简单数据类型在javaScript中简单数据类型只有五种：
 
-
-page/pageContext:只在当前页面有效，离开无效
-request:在一次请求转发中有效
-session:在一次会话中有效，在打开浏览器是第一次访问为一个新的会话，如何再次访问则不属于第一个会话。
-application:在服务器范围有">
+undefined：代表什么都没有，用typeof(undefined)得到的结果依然是undefined。可以将undefined赋值给任何变量和属性，但并不意味着清楚该变量，反而会多一个属性
+null：有概念但没有东西，typeof(null)得到的结果是object，但是null并非object，而且具有nul">
 
 
 
@@ -149,13 +134,13 @@ application:在服务器范围有">
 
 
 
-  <link rel="canonical" href="http://yomosir.com/2017/03/07/EL表达式/"/>
+  <link rel="canonical" href="http://yomosir.com/2017/03/09/javaScriptNote01/"/>
 
 
 
 
 
-  <title> EL表达式 | Coding And Study </title>
+  <title> javaScriptNote01 | Coding And Study </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -284,7 +269,7 @@ application:在服务器范围有">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yomosir.com/2017/03/07/EL表达式/">
+    <link itemprop="mainEntityOfPage" href="http://yomosir.com/2017/03/09/javaScriptNote01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zgc">
@@ -305,7 +290,7 @@ application:在服务器范围有">
             
             
               
-                EL表达式
+                javaScriptNote01
               
             
           </h1>
@@ -320,8 +305,8 @@ application:在服务器范围有">
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-07T17:18:10+08:00">
-                2017-03-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T21:56:59+08:00">
+                2017-03-09
               </time>
             
 
@@ -343,8 +328,8 @@ application:在服务器范围有">
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JSP/" itemprop="url" rel="index">
-                    <span itemprop="name">JSP</span>
+                  <a href="/categories/javaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">javaScript</span>
                   </a>
                 </span>
 
@@ -361,8 +346,8 @@ application:在服务器范围有">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/07/EL表达式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/07/EL表达式/" itemprop="commentCount"></span>
+                <a href="/2017/03/09/javaScriptNote01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/09/javaScriptNote01/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -388,34 +373,20 @@ application:在服务器范围有">
       
 
       
-        <h2 id="JSP与Servlet的关系"><a href="#JSP与Servlet的关系" class="headerlink" title="JSP与Servlet的关系"></a>JSP与Servlet的关系</h2><p>现有Servlet后有JSP–并且JSP就是Servlet</p>
-<h2 id="JSP的九个内置对象"><a href="#JSP的九个内置对象" class="headerlink" title="JSP的九个内置对象"></a>JSP的九个内置对象</h2><ul>
-<li>WEB域内置对象【存值取值-传送数据】</li>
-</ul>
-<ol>
-<li>page/pageContext:只在当前页面有效，离开无效</li>
-<li>request:在一次请求转发中有效</li>
-<li>session:在一次会话中有效，在打开浏览器是第一次访问为一个新的会话，如何再次访问则不属于第一个会话。</li>
-<li>application:在服务器范围有效，只要服务器未关闭则服务器域内的值就不会消失</li>
-</ol>
+        <h2 id="javaScript简单数据类型"><a href="#javaScript简单数据类型" class="headerlink" title="javaScript简单数据类型"></a>javaScript简单数据类型</h2><p>在javaScript中简单数据类型只有五种：</p>
 <ul>
-<li><p>注意：WEB域内置对象均有getAttribute和setAttribute方法设置值和取值。</p>
-</li>
-<li><p>其他</p>
-</li>
+<li>undefined：代表什么都没有，用typeof(undefined)得到的结果依然是undefined。可以将undefined赋值给任何变量和属性，但并不意味着清楚该变量，反而会多一个属性</li>
+<li>null：有概念但没有东西，typeof(null)得到的结果是object，但是null并非object，而且具有null值的变量也并非object</li>
+<li>boolean：只有两个值真和假</li>
+<li>Number：线性事物数字之类的数据。NaN，infinity用typeof()得到的结果也是Number。NaN与任何数计算都是NaN，并且NaN != NaN。再者infinity/infinitte = NaN.</li>
+<li>string：字符串</li>
 </ul>
-<ol>
-<li>response:响应<code>response.setContentType(&quot;test/html;charst=utf-8&quot;)</code></li>
-<li>out:输出</li>
-<li>exception:异常</li>
-<li>config:读取初始化信息（web.xml）</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">session.getId()<span class="comment">//每次打开会话时都会有一个新的id</span></div><div class="line"></div><div class="line">application.getRealPath(<span class="string">"/"</span>)</div><div class="line">application.getRealPath(<span class="string">""</span>)<span class="comment">//两个获取路径的方法相同但是注意/</span></div></pre></td></tr></table></figure>
-<h2 id="EL表达式"><a href="#EL表达式" class="headerlink" title="EL表达式"></a>EL表达式</h2><p>作用：获取WEB开发常用的对象，通过${}来取WEB域中的值，这个值可以是个字符串，可以使集合和对象<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在获取WEB与中数据时，当其拥有相同的key值，则获取到值的顺序是</span></div><div class="line"><span class="comment">//pageContext,request,session,application</span></div><div class="line"><span class="comment">//例如：</span></div><div class="line">pageContext.setAttribute(<span class="string">"book"</span>,<span class="string">"1"</span>);</div><div class="line">request.setAttribute(<span class="string">"book"</span>,<span class="string">"2"</span>);</div><div class="line">session.setAttribute(<span class="string">"book"</span>,<span class="string">"3"</span>);</div><div class="line">application.setAttribute(<span class="string">"book"</span>,<span class="string">"3"</span>);</div><div class="line"><span class="comment">//当用EL表达式取值时：取到的是1，注释掉第一行再取值便是2，以此类推</span></div><div class="line">$&#123;pageScope&#125;</div><div class="line">$&#123;requestScope&#125;</div><div class="line">$&#123;sessionScope&#125;</div><div class="line">$&#123;applicationScope&#125;</div></pre></td></tr></table></figure></p>
-<p>当对对象和集合操作时，要取内部的属性值或者集合中的key值时需要使用<code>.</code>或者<code>[]</code>的方式获取属性。</p>
-<ul>
-<li>当再JSP页面需要取地址栏中的传递参数如<code>?user_id = 100</code>时，可以使用param,如：<code>${param.user_id}</code>,并且不需要再页面显示时判断是否为空，不会输出null值。如果没有值则什么也不会输出。</li>
-</ul>
+<p>在javaScript中只有false，undefined，null，“ ”，0这几个值转换为boolean值时是false，其余的都是true！</p>
+<h2 id="复杂数据object"><a href="#复杂数据object" class="headerlink" title="复杂数据object"></a>复杂数据object</h2><p>javascript中只有一个复杂数据类型那就是object，object是对象类型。但是没有类的概念<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> life = &#123;&#125;;<span class="comment">//这便是新建了一个对象数据类型</span></div><div class="line">life.name = <span class="string">"张三"</span>;<span class="comment">//life对象</span></div><div class="line">life.run = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(life.name+<span class="string">"can run!"</span>)&#125;；<span class="comment">//新建一个run方法</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> ilife.age = <span class="number">0</span>;i &lt;= <span class="number">100</span>;i++)&#123;</div><div class="line">	<span class="keyword">if</span>(life.age == <span class="number">100</span>)&#123;</div><div class="line">		life.run=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;life.name+<span class="string">" died"</span>&#125;;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">life.run();</div></pre></td></tr></table></figure></p>
+<p>javaScript没有类但是对象却更加灵活，让对象不那么死板，可以添加属性和方法，让对象更加多样化。</p>
+<h2 id="function函数代码块"><a href="#function函数代码块" class="headerlink" title="function函数代码块"></a>function函数代码块</h2><p>javascript中代码只有function一种形式，function就是函数类型。在javascript中代码块的定义有两种方式：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//这是定义式</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun01</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">"hello!"</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">//这是变量式</span></div><div class="line"><span class="keyword">var</span> fun2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	alert(<span class="string">"hello"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在javascript中执行语句时并不是一行一行的执行的，而是一段一段的执行的，在这个时候定义式函数语句会被提取出来优先执行，函数定义执行完之后，在顺序执行其他语句。<br>```javaScript<br>function fun(){<br>    alert(“hello01!”);<br>}</p>
+<p>fun();//输出hello02<br>funvtion fun(){<br>    alert(“hello02”);<br>}<br>fun();//输出hello02<br>```s</p>
 
       
     </div>
@@ -439,7 +410,7 @@ application:在服务器范围有">
       
         <div class="post-tags">
           
-            <a href="/tags/JSP/" rel="tag"># JSP</a>
+            <a href="/tags/javaScript/" rel="tag"># javaScript</a>
           
         </div>
       
@@ -452,8 +423,8 @@ application:在服务器范围有">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/07/JSTL-c标签/" rel="next" title="JSTL-c标签">
-                <i class="fa fa-chevron-left"></i> JSTL-c标签
+              <a href="/2017/03/07/EL表达式/" rel="next" title="EL表达式">
+                <i class="fa fa-chevron-left"></i> EL表达式
               </a>
             
           </div>
@@ -461,10 +432,6 @@ application:在服务器范围有">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/09/javaScriptNote01/" rel="prev" title="javaScriptNote01">
-                javaScriptNote01 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,8 +457,8 @@ application:在服务器范围有">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/07/EL表达式/"
-           data-title="EL表达式" data-url="http://yomosir.com/2017/03/07/EL表达式/">
+      <div class="ds-thread" data-thread-key="2017/03/09/javaScriptNote01/"
+           data-title="javaScriptNote01" data-url="http://yomosir.com/2017/03/09/javaScriptNote01/">
       </div>
     
   </div>
@@ -626,7 +593,7 @@ application:在服务器范围有">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP与Servlet的关系"><span class="nav-number">1.</span> <span class="nav-text">JSP与Servlet的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP的九个内置对象"><span class="nav-number">2.</span> <span class="nav-text">JSP的九个内置对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EL表达式"><span class="nav-number">3.</span> <span class="nav-text">EL表达式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#javaScript简单数据类型"><span class="nav-number">1.</span> <span class="nav-text">javaScript简单数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复杂数据object"><span class="nav-number">2.</span> <span class="nav-text">复杂数据object</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#function函数代码块"><span class="nav-number">3.</span> <span class="nav-text">function函数代码块</span></a></li></ol></div>
             
 
           </div>
