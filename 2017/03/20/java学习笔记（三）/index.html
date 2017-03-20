@@ -88,16 +88,37 @@
 
 
 
-<meta name="description" content="java反射第一部分万物皆对象java中类也是对象，类是java.lang.Class类的实例对象，任何一个类都是Class类的对象，有三种表示方式：123456789//假设现在有一个类为yomosir.test.Test.java//第一种表示方式，一直类名：	Class c1 = Test.class;//第二种表达方式，一直该类的一个对象t1:	Class c2 = t1.getClass">
+<meta name="description" content="String创建问题创建一个字符串的方法有两种：
+
+直接赋值
+用构造方法创建12345//直接赋值，入池String str1 = &quot;Hello&quot;;String str2 = &quot;Hello&quot;;//用构造方法创建，不入池String str3 = new String(&quot;Hello&quot;);
+
+
+
+对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java反射(一)">
-<meta property="og:url" content="http://yomosir.com/2016/12/06/java知识总结一/index.html">
+<meta property="og:title" content="String问题">
+<meta property="og:url" content="http://yomosir.com/2017/03/20/java学习笔记（三）/index.html">
 <meta property="og:site_name" content="Coding And Study">
-<meta property="og:description" content="java反射第一部分万物皆对象java中类也是对象，类是java.lang.Class类的实例对象，任何一个类都是Class类的对象，有三种表示方式：123456789//假设现在有一个类为yomosir.test.Test.java//第一种表示方式，一直类名：	Class c1 = Test.class;//第二种表达方式，一直该类的一个对象t1:	Class c2 = t1.getClass">
-<meta property="og:updated_time" content="2016-12-06T08:42:04.073Z">
+<meta property="og:description" content="String创建问题创建一个字符串的方法有两种：
+
+直接赋值
+用构造方法创建12345//直接赋值，入池String str1 = &quot;Hello&quot;;String str2 = &quot;Hello&quot;;//用构造方法创建，不入池String str3 = new String(&quot;Hello&quot;);
+
+
+
+对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上">
+<meta property="og:updated_time" content="2017-03-20T12:04:04.489Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="java反射(一)">
-<meta name="twitter:description" content="java反射第一部分万物皆对象java中类也是对象，类是java.lang.Class类的实例对象，任何一个类都是Class类的对象，有三种表示方式：123456789//假设现在有一个类为yomosir.test.Test.java//第一种表示方式，一直类名：	Class c1 = Test.class;//第二种表达方式，一直该类的一个对象t1:	Class c2 = t1.getClass">
+<meta name="twitter:title" content="String问题">
+<meta name="twitter:description" content="String创建问题创建一个字符串的方法有两种：
+
+直接赋值
+用构造方法创建12345//直接赋值，入池String str1 = &quot;Hello&quot;;String str2 = &quot;Hello&quot;;//用构造方法创建，不入池String str3 = new String(&quot;Hello&quot;);
+
+
+
+对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上">
 
 
 
@@ -125,13 +146,13 @@
 
 
 
-  <link rel="canonical" href="http://yomosir.com/2016/12/06/java知识总结一/"/>
+  <link rel="canonical" href="http://yomosir.com/2017/03/20/java学习笔记（三）/"/>
 
 
 
 
 
-  <title> java反射(一) | Coding And Study </title>
+  <title> String问题 | Coding And Study </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -260,7 +281,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yomosir.com/2016/12/06/java知识总结一/">
+    <link itemprop="mainEntityOfPage" href="http://yomosir.com/2017/03/20/java学习笔记（三）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zgc">
@@ -281,7 +302,7 @@
             
             
               
-                java反射(一)
+                String问题
               
             
           </h1>
@@ -296,8 +317,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-06T15:56:13+08:00">
-                2016-12-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T19:31:08+08:00">
+                2017-03-20
               </time>
             
 
@@ -337,8 +358,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/06/java知识总结一/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/06/java知识总结一/" itemprop="commentCount"></span>
+                <a href="/2017/03/20/java学习笔记（三）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/20/java学习笔记（三）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -364,13 +385,21 @@
       
 
       
-        <h1 id="java反射第一部分"><a href="#java反射第一部分" class="headerlink" title="java反射第一部分"></a>java反射第一部分</h1><h2 id="万物皆对象"><a href="#万物皆对象" class="headerlink" title="万物皆对象"></a>万物皆对象</h2><p>java中类也是对象，类是java.lang.Class类的实例对象，任何一个类都是Class类的对象，有三种表示方式：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//假设现在有一个类为yomosir.test.Test.java</span></div><div class="line"><span class="comment">//第一种表示方式，一直类名：</span></div><div class="line">	Class c1 = Test.class;</div><div class="line"><span class="comment">//第二种表达方式，一直该类的一个对象t1:</span></div><div class="line">	Class c2 = t1.getClass();</div><div class="line"><span class="comment">//第三种方式为：</span></div><div class="line">	Class c3 =Class.forName(<span class="string">"yomosir.test.Test"</span>);</div><div class="line"><span class="comment">//通过类的类类型进行类的实例化</span></div><div class="line">	c1.newInstance();</div></pre></td></tr></table></figure></p>
-<p>c1,c2,c3均为类的类类型，一个类只可能是一个Class类的实例对象。并且可以通过类的类类型进行创建类的实例化。这也是类的实例化的一种方法。</p>
-<h2 id="类的动态加载和静态加载"><a href="#类的动态加载和静态加载" class="headerlink" title="类的动态加载和静态加载"></a>类的动态加载和静态加载</h2><ul>
-<li>在编译时加载类称之为静态加载,用new创建对象是静态加载类，在编译时便会加载所有可能需要的类。</li>
-<li>在运行时加载类称之为动态加载类<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Class.forName(<span class="string">"类的全称"</span>);<span class="comment">//类的动态加载</span></div></pre></td></tr></table></figure>
+        <h1 id="String创建问题"><a href="#String创建问题" class="headerlink" title="String创建问题"></a>String创建问题</h1><p>创建一个字符串的方法有两种：</p>
+<ol>
+<li>直接赋值</li>
+<li>用构造方法创建<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//直接赋值，入池</span></div><div class="line">String str1 = <span class="string">"Hello"</span>;</div><div class="line">String str2 = <span class="string">"Hello"</span>;</div><div class="line"><span class="comment">//用构造方法创建，不入池</span></div><div class="line">String str3 = <span class="keyword">new</span> String(<span class="string">"Hello"</span>);</div></pre></td></tr></table></figure>
 </li>
+</ol>
+<ul>
+<li>对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上面的内存的。</li>
 </ul>
+<ul>
+<li>对于第二中方式其实<strong><em>创建了两个对象</em></strong>一个是匿名对象，另一个氏new实例化的对象，其中一个对象被视为垃圾，会被GC垃圾回收机制回收。并且这个创建的内存是不会被共享的。</li>
+</ul>
+<p>但是提供了方法可以使其手动入池：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String str4 = <span class="keyword">new</span> String(<span class="string">"Hello"</span>).intern();</div></pre></td></tr></table></figure></p>
+<p>这样可以使得该类创建的字符串进行手动入池。</p>
+<h1 id="字符串内容一旦声明不可改变"><a href="#字符串内容一旦声明不可改变" class="headerlink" title="字符串内容一旦声明不可改变"></a>字符串内容一旦声明不可改变</h1><p>如果我们创建一个字符串，然后再对字符串进行拼接，这样该字符串之前指向的堆内存是不会改变的，但字符串会指向另一个堆内存，该堆内存内便是拼接后的字符串，原本的内存会被视为垃圾进行回收。</p>
 
       
     </div>
@@ -407,8 +436,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/04/SSM-libs/" rel="next" title="SSM所需分包基础">
-                <i class="fa fa-chevron-left"></i> SSM所需分包基础
+              <a href="/2017/03/09/javaScriptNote01/" rel="next" title="javaScriptNote01">
+                <i class="fa fa-chevron-left"></i> javaScriptNote01
               </a>
             
           </div>
@@ -416,10 +445,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/07/java知识总结二/" rel="prev" title="java反射(二)">
-                java反射(二) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -445,8 +470,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/06/java知识总结一/"
-           data-title="java反射(一)" data-url="http://yomosir.com/2016/12/06/java知识总结一/">
+      <div class="ds-thread" data-thread-key="2017/03/20/java学习笔记（三）/"
+           data-title="String问题" data-url="http://yomosir.com/2017/03/20/java学习笔记（三）/">
       </div>
     
   </div>
@@ -495,7 +520,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -581,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java反射第一部分"><span class="nav-number">1.</span> <span class="nav-text">java反射第一部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#万物皆对象"><span class="nav-number">1.1.</span> <span class="nav-text">万物皆对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的动态加载和静态加载"><span class="nav-number">1.2.</span> <span class="nav-text">类的动态加载和静态加载</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#String创建问题"><span class="nav-number">1.</span> <span class="nav-text">String创建问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串内容一旦声明不可改变"><span class="nav-number">2.</span> <span class="nav-text">字符串内容一旦声明不可改变</span></a></li></ol></div>
             
 
           </div>
