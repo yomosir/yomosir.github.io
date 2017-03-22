@@ -89,18 +89,38 @@
 
 
 <meta name="description" content="代码块在一个非主类中定义代码块时，掉创建该类的实例执行顺序为：    静态代码块&amp;gt;构造快&amp;gt;构造方法
-内部类">
+内部类内部类可以访问外部类的私有成员或者由外部类访问内部类的私有操作
+不同类中实例化内部类对象
+非static内部类：1outer.inner in = new outer().new inner();
+
+
+
+static内部类：12//	static内部类可以不依赖于外部类实例被实例化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java学习笔记（一）">
 <meta property="og:url" content="http://yomosir.com/2017/03/20/java学习笔记（一）-1/index.html">
 <meta property="og:site_name" content="Coding And Study">
 <meta property="og:description" content="代码块在一个非主类中定义代码块时，掉创建该类的实例执行顺序为：    静态代码块&amp;gt;构造快&amp;gt;构造方法
-内部类">
-<meta property="og:updated_time" content="2017-03-20T13:21:41.728Z">
+内部类内部类可以访问外部类的私有成员或者由外部类访问内部类的私有操作
+不同类中实例化内部类对象
+非static内部类：1outer.inner in = new outer().new inner();
+
+
+
+static内部类：12//	static内部类可以不依赖于外部类实例被实例化">
+<meta property="og:image" content="http://i.imgur.com/Ip80CTm.png">
+<meta property="og:updated_time" content="2017-03-22T02:31:49.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java学习笔记（一）">
 <meta name="twitter:description" content="代码块在一个非主类中定义代码块时，掉创建该类的实例执行顺序为：    静态代码块&amp;gt;构造快&amp;gt;构造方法
-内部类">
+内部类内部类可以访问外部类的私有成员或者由外部类访问内部类的私有操作
+不同类中实例化内部类对象
+非static内部类：1outer.inner in = new outer().new inner();
+
+
+
+static内部类：12//	static内部类可以不依赖于外部类实例被实例化">
+<meta name="twitter:image" content="http://i.imgur.com/Ip80CTm.png">
 
 
 
@@ -200,7 +220,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -210,7 +230,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            Kategorien
+            Categories
           </a>
         </li>
       
@@ -220,7 +240,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -297,7 +317,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-20T20:21:22+08:00">
                 2017-03-20
@@ -318,7 +338,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -368,7 +388,22 @@
 
       
         <h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><p>在一个非主类中定义代码块时，掉创建该类的实例执行顺序为：<br>    <strong>静态代码块&gt;构造快&gt;构造方法</strong></p>
-<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1>
+<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><p>内部类可以访问外部类的私有成员或者由外部类访问内部类的私有操作</p>
+<h2 id="不同类中实例化内部类对象"><a href="#不同类中实例化内部类对象" class="headerlink" title="不同类中实例化内部类对象"></a>不同类中实例化内部类对象</h2><ul>
+<li>非static内部类：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">outer.inner in = <span class="keyword">new</span> outer().new inner();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>static内部类：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//	static内部类可以不依赖于外部类实例被实例化</span></div><div class="line">	outer.inner in = <span class="keyword">new</span> outer.inner();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="继承的限制"><a href="#继承的限制" class="headerlink" title="继承的限制"></a>继承的限制</h1><ol>
+<li>一个子类只能继承一个父类</li>
+<li>非私有操作显示继承（可以任意利用对象操作），私有操作是隐式继承（需要通过间接完成）</li>
+<li>在继承关系中，如果要实例子类对象，会默认先调用父类的构造方法，为父类中的属性先初始化再调用子类的构造方法</li>
+</ol>
+<h1 id="this-与-super区别"><a href="#this-与-super区别" class="headerlink" title="this 与 super区别"></a>this 与 super区别</h1><p><img src="http://i.imgur.com/Ip80CTm.png" alt=""></p>
+
       
     </div>
 
@@ -465,10 +500,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -489,7 +524,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">18</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -500,7 +535,7 @@
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
                 <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">categories</span>
               </a>
             </div>
           
@@ -511,7 +546,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
                 <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">tags</span>
               </a>
             </div>
           
@@ -574,7 +609,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块"><span class="nav-number">1.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类"><span class="nav-number">2.</span> <span class="nav-text">内部类</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块"><span class="nav-number">1.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内部类"><span class="nav-number">2.</span> <span class="nav-text">内部类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不同类中实例化内部类对象"><span class="nav-number">2.1.</span> <span class="nav-text">不同类中实例化内部类对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承的限制"><span class="nav-number">3.</span> <span class="nav-text">继承的限制</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#this-与-super区别"><span class="nav-number">4.</span> <span class="nav-text">this 与 super区别</span></a></li></ol></div>
             
 
           </div>
@@ -606,7 +641,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
