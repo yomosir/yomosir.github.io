@@ -108,7 +108,9 @@
 
 
 对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上">
-<meta property="og:updated_time" content="2017-03-20T12:04:04.489Z">
+<meta property="og:image" content="http://i.imgur.com/9p1ff8g.png">
+<meta property="og:image" content="http://i.imgur.com/qFngd5o.png">
+<meta property="og:updated_time" content="2017-03-22T02:01:43.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="String问题">
 <meta name="twitter:description" content="String创建问题创建一个字符串的方法有两种：
@@ -119,6 +121,7 @@
 
 
 对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上">
+<meta name="twitter:image" content="http://i.imgur.com/9p1ff8g.png">
 
 
 
@@ -392,12 +395,12 @@
 </li>
 </ol>
 <ul>
-<li>对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上面的内存的。</li>
+<li>对于第一种创建方式是很常用的一种，只是表示在堆开辟的一块空间，是共享的。str1和str2是共享同一个堆上面的内存的。<br><img src="http://i.imgur.com/9p1ff8g.png" alt=""></li>
 </ul>
 <ul>
-<li>对于第二中方式其实<strong><em>创建了两个对象</em></strong>一个是匿名对象，另一个氏new实例化的对象，其中一个对象被视为垃圾，会被GC垃圾回收机制回收。并且这个创建的内存是不会被共享的。</li>
+<li>对于第二中方式其实<strong><em>创建了两个对象</em></strong>一个是匿名对象，另一个氏new实例化的对象，其中一个对象被视为垃圾，会被GC垃圾回收机制回收。并且这个创建的内存是不会被共享的。<br><img src="http://i.imgur.com/qFngd5o.png" alt=""><br>但是提供了方法可以使其手动入池：<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String str4 = <span class="keyword">new</span> String(<span class="string">"Hello"</span>).intern();</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>但是提供了方法可以使其手动入池：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String str4 = <span class="keyword">new</span> String(<span class="string">"Hello"</span>).intern();</div></pre></td></tr></table></figure></p>
 <p>这样可以使得该类创建的字符串进行手动入池。</p>
 <h1 id="字符串内容一旦声明不可改变"><a href="#字符串内容一旦声明不可改变" class="headerlink" title="字符串内容一旦声明不可改变"></a>字符串内容一旦声明不可改变</h1><p>如果我们创建一个字符串，然后再对字符串进行拼接，这样该字符串之前指向的堆内存是不会改变的，但字符串会指向另一个堆内存，该堆内存内便是拼接后的字符串，原本的内存会被视为垃圾进行回收。</p>
 
@@ -445,6 +448,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/20/java学习笔记（一）-1/" rel="prev" title="java学习笔记（一）">
+                java学习笔记（一） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -520,7 +527,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
